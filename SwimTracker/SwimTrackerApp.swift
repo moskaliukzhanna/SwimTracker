@@ -11,7 +11,10 @@ import SwiftUI
 struct SwimTrackerApp: App {
     var body: some Scene {
         WindowGroup {
-           LandingPageView()
+            let manager = LandingManager()
+            let store = RecordStore()
+            let presenter = LandingPresenter(manager: manager, delegate: store)
+            LandingPageView(store: store, manager: manager, presenter: presenter)
         }
     }
 }

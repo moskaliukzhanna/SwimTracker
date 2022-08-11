@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		20B353A328A5049D003C5D24 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A228A5049D003C5D24 /* LandingPageView.swift */; };
+		20B353A628A51E50003C5D24 /* WorkoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */; };
+		20B353A828A51F1F003C5D24 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A728A51F1F003C5D24 /* WorkoutManager.swift */; };
+		20B353AA28A5394C003C5D24 /* LandingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A928A5394C003C5D24 /* LandingPresenter.swift */; };
+		20B353AC28A53989003C5D24 /* LandingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AB28A53989003C5D24 /* LandingManager.swift */; };
+		20B353AE28A53D33003C5D24 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AD28A53D33003C5D24 /* Record.swift */; };
+		20B353B028A541C7003C5D24 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AF28A541C7003C5D24 /* RecordStore.swift */; };
+		20B353B228A55AFA003C5D24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353B128A55AFA003C5D24 /* ErrorView.swift */; };
 		20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */; };
 		20FE3E2928A3C1BA0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2828A3C1BA0032A25D /* Assets.xcassets */; };
 		20FE3E2C28A3C1BA0032A25D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2B28A3C1BA0032A25D /* Preview Assets.xcassets */; };
@@ -98,6 +105,13 @@
 
 /* Begin PBXFileReference section */
 		20B353A228A5049D003C5D24 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
+		20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPresenter.swift; sourceTree = "<group>"; };
+		20B353A728A51F1F003C5D24 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		20B353A928A5394C003C5D24 /* LandingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPresenter.swift; sourceTree = "<group>"; };
+		20B353AB28A53989003C5D24 /* LandingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingManager.swift; sourceTree = "<group>"; };
+		20B353AD28A53D33003C5D24 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		20B353AF28A541C7003C5D24 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
+		20B353B128A55AFA003C5D24 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		20FE3E2128A3C1B90032A25D /* SwimTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerApp.swift; sourceTree = "<group>"; };
 		20FE3E2828A3C1BA0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +182,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20B353A428A51E11003C5D24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20FE3E9228A3D1020032A25D /* StartView.swift */,
+				20FE3E9428A3D5140032A25D /* WorkoutView.swift */,
+				20FE3E9628A3F2970032A25D /* RingShape.swift */,
+				20FE3E9828A3F5DE0032A25D /* ActivityRingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		20FE3E1828A3C1B90032A25D = {
 			isa = PBXGroup;
 			children = (
@@ -198,8 +223,13 @@
 			children = (
 				20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */,
 				20B353A228A5049D003C5D24 /* LandingPageView.swift */,
+				20B353A928A5394C003C5D24 /* LandingPresenter.swift */,
+				20B353AB28A53989003C5D24 /* LandingManager.swift */,
+				20B353AF28A541C7003C5D24 /* RecordStore.swift */,
+				20B353AD28A53D33003C5D24 /* Record.swift */,
 				20FE3E2828A3C1BA0032A25D /* Assets.xcassets */,
 				20FE3E2A28A3C1BA0032A25D /* Preview Content */,
+				20B353B128A55AFA003C5D24 /* ErrorView.swift */,
 			);
 			path = SwimTracker;
 			sourceTree = "<group>";
@@ -223,11 +253,10 @@
 		20FE3E5428A3C1BC0032A25D /* SwimTracker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				20FE3E9228A3D1020032A25D /* StartView.swift */,
-				20FE3E9428A3D5140032A25D /* WorkoutView.swift */,
-				20FE3E9628A3F2970032A25D /* RingShape.swift */,
-				20FE3E9828A3F5DE0032A25D /* ActivityRingView.swift */,
+				20B353A428A51E11003C5D24 /* Views */,
 				20FE3E5728A3C1BC0032A25D /* SwimTrackerApp.swift */,
+				20B353A728A51F1F003C5D24 /* WorkoutManager.swift */,
+				20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */,
 				20FE3E5928A3C1BC0032A25D /* ComplicationController.swift */,
 				20FE3E9A28A3FADB0032A25D /* Double+Helpers.swift */,
 				20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */,
@@ -505,7 +534,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B353A328A5049D003C5D24 /* LandingPageView.swift in Sources */,
+				20B353AA28A5394C003C5D24 /* LandingPresenter.swift in Sources */,
+				20B353AE28A53D33003C5D24 /* Record.swift in Sources */,
 				20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */,
+				20B353B228A55AFA003C5D24 /* ErrorView.swift in Sources */,
+				20B353B028A541C7003C5D24 /* RecordStore.swift in Sources */,
+				20B353AC28A53989003C5D24 /* LandingManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,8 +563,10 @@
 			files = (
 				20FE3E5828A3C1BC0032A25D /* SwimTrackerApp.swift in Sources */,
 				20FE3E9728A3F2970032A25D /* RingShape.swift in Sources */,
+				20B353A828A51F1F003C5D24 /* WorkoutManager.swift in Sources */,
 				20FE3E5A28A3C1BC0032A25D /* ComplicationController.swift in Sources */,
 				20FE3E9528A3D5140032A25D /* WorkoutView.swift in Sources */,
+				20B353A628A51E50003C5D24 /* WorkoutPresenter.swift in Sources */,
 				20FE3E9B28A3FADB0032A25D /* Double+Helpers.swift in Sources */,
 				20FE3E9328A3D1020032A25D /* StartView.swift in Sources */,
 				20FE3E9928A3F5DE0032A25D /* ActivityRingView.swift in Sources */,

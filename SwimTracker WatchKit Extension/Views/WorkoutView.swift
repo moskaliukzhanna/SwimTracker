@@ -8,6 +8,14 @@
 import SwiftUI
 
 struct WorkoutView: View {
+    var presenter: WorkoutPresenterProtocol?
+    
+    init() {
+        let manager = WorkoutManager()
+        presenter = WorkoutPresenter(manager: manager)
+        presenter?.startWorkout()
+    }
+    
     var body: some View {
         VStack {
             Text("0:00")
@@ -26,5 +34,6 @@ struct WorkoutView: View {
 struct WorkoutView_Previews: PreviewProvider {
     static var previews: some View {
         WorkoutView()
+        
     }
 }

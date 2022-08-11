@@ -5,26 +5,48 @@
 //  Created by Zhanna Moskaliuk on 11.08.2022.
 //
 
+import Combine
 import SwiftUI
 
 struct LandingPageView: View {
+    
+    private let manager: LandingManagerProtocol
+    private let presenter: LandingPresenterProtocol
+    
+    @ObservedObject var store: RecordStore
+    
+    init(store: RecordStore, manager: LandingManager, presenter: LandingPresenter) {
+        self.store = store
+        self.manager = manager
+        self.presenter = presenter
+
+    }
+    
     var body: some View {
-        NavigationView {
-            List {
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView { () -> AnyView in
+            switch store.state {
+            case .loading:
+                return AnyView(EmptyView())
+            case .error(let error):
+                return  AnyView(ErrorView(errorMessage: error))
+            case .loaded( _):
+                return AnyView(EmptyView())
             }
-            .navigationTitle("Welcome back!")
-            .navigationBarTitleDisplayMode(.inline)
+        }
+        .navigationTitle("Welcome back!")
+        .navigationBarTitleDisplayMode(.inline)
+        
+        .onAppear {
+            presenter.fetchRecords()
         }
         
     }
 }
 
 
-struct LandingPageView_Previews: PreviewProvider {
-    static var previews: some View {
-        LandingPageView()
-    }
-}
+
+//struct LandingPageView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        LandingPageView()
+//    }
+//}
