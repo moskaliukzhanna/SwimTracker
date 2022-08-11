@@ -7,24 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20B353A328A5049D003C5D24 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A228A5049D003C5D24 /* LandingPageView.swift */; };
 		20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */; };
-		20FE3E2728A3C1B90032A25D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E2628A3C1B90032A25D /* ContentView.swift */; };
 		20FE3E2928A3C1BA0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2828A3C1BA0032A25D /* Assets.xcassets */; };
 		20FE3E2C28A3C1BA0032A25D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2B28A3C1BA0032A25D /* Preview Assets.xcassets */; };
-		20FE3E3628A3C1BA0032A25D /* SwimTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E3528A3C1BA0032A25D /* SwimTrackerTests.swift */; };
-		20FE3E4028A3C1BA0032A25D /* SwimTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E3F28A3C1BA0032A25D /* SwimTrackerUITests.swift */; };
-		20FE3E4228A3C1BA0032A25D /* SwimTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E4128A3C1BA0032A25D /* SwimTrackerUITestsLaunchTests.swift */; };
 		20FE3E4628A3C1BA0032A25D /* SwimTracker WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 20FE3E4528A3C1BA0032A25D /* SwimTracker WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		20FE3E4B28A3C1BC0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E4A28A3C1BC0032A25D /* Assets.xcassets */; };
 		20FE3E5128A3C1BC0032A25D /* SwimTracker WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 20FE3E5028A3C1BC0032A25D /* SwimTracker WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		20FE3E5628A3C1BC0032A25D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E5528A3C1BC0032A25D /* ContentView.swift */; };
 		20FE3E5828A3C1BC0032A25D /* SwimTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E5728A3C1BC0032A25D /* SwimTrackerApp.swift */; };
 		20FE3E5A28A3C1BC0032A25D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E5928A3C1BC0032A25D /* ComplicationController.swift */; };
 		20FE3E5C28A3C1BD0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */; };
 		20FE3E5F28A3C1BD0032A25D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E5E28A3C1BD0032A25D /* Preview Assets.xcassets */; };
-		20FE3E6A28A3C1BD0032A25D /* SwimTracker_WatchKit_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E6928A3C1BD0032A25D /* SwimTracker_WatchKit_AppTests.swift */; };
 		20FE3E7428A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E7328A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift */; };
-		20FE3E7628A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E7528A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITestsLaunchTests.swift */; };
+		20FE3E9328A3D1020032A25D /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9228A3D1020032A25D /* StartView.swift */; };
+		20FE3E9528A3D5140032A25D /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9428A3D5140032A25D /* WorkoutView.swift */; };
+		20FE3E9728A3F2970032A25D /* RingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9628A3F2970032A25D /* RingShape.swift */; };
+		20FE3E9928A3F5DE0032A25D /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9828A3F5DE0032A25D /* ActivityRingView.swift */; };
+		20FE3E9B28A3FADB0032A25D /* Double+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9A28A3FADB0032A25D /* Double+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,30 +97,29 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		20B353A228A5049D003C5D24 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		20FE3E2128A3C1B90032A25D /* SwimTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerApp.swift; sourceTree = "<group>"; };
-		20FE3E2628A3C1B90032A25D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20FE3E2828A3C1BA0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20FE3E2B28A3C1BA0032A25D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20FE3E3128A3C1BA0032A25D /* SwimTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwimTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FE3E3528A3C1BA0032A25D /* SwimTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerTests.swift; sourceTree = "<group>"; };
 		20FE3E3B28A3C1BA0032A25D /* SwimTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwimTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FE3E3F28A3C1BA0032A25D /* SwimTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerUITests.swift; sourceTree = "<group>"; };
-		20FE3E4128A3C1BA0032A25D /* SwimTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		20FE3E4528A3C1BA0032A25D /* SwimTracker WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwimTracker WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FE3E4A28A3C1BC0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20FE3E5028A3C1BC0032A25D /* SwimTracker WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SwimTracker WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FE3E5528A3C1BC0032A25D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		20FE3E5728A3C1BC0032A25D /* SwimTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerApp.swift; sourceTree = "<group>"; };
 		20FE3E5928A3C1BC0032A25D /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20FE3E5E28A3C1BD0032A25D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20FE3E6028A3C1BD0032A25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20FE3E6528A3C1BD0032A25D /* SwimTracker WatchKit AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwimTracker WatchKit AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FE3E6928A3C1BD0032A25D /* SwimTracker_WatchKit_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTracker_WatchKit_AppTests.swift; sourceTree = "<group>"; };
 		20FE3E6F28A3C1BD0032A25D /* SwimTracker WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwimTracker WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FE3E7328A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTracker_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
-		20FE3E7528A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTracker_WatchKit_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		20FE3E9228A3D1020032A25D /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		20FE3E9428A3D5140032A25D /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
+		20FE3E9628A3F2970032A25D /* RingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingShape.swift; sourceTree = "<group>"; };
+		20FE3E9828A3F5DE0032A25D /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
+		20FE3E9A28A3FADB0032A25D /* Double+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,11 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				20FE3E2328A3C1B90032A25D /* SwimTracker */,
-				20FE3E3428A3C1BA0032A25D /* SwimTrackerTests */,
-				20FE3E3E28A3C1BA0032A25D /* SwimTrackerUITests */,
 				20FE3E4928A3C1BA0032A25D /* SwimTracker WatchKit App */,
 				20FE3E5428A3C1BC0032A25D /* SwimTracker WatchKit Extension */,
-				20FE3E6828A3C1BD0032A25D /* SwimTracker WatchKit AppTests */,
 				20FE3E7228A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */,
 				20FE3E2228A3C1B90032A25D /* Products */,
 			);
@@ -202,7 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */,
-				20FE3E2628A3C1B90032A25D /* ContentView.swift */,
+				20B353A228A5049D003C5D24 /* LandingPageView.swift */,
 				20FE3E2828A3C1BA0032A25D /* Assets.xcassets */,
 				20FE3E2A28A3C1BA0032A25D /* Preview Content */,
 			);
@@ -217,23 +212,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		20FE3E3428A3C1BA0032A25D /* SwimTrackerTests */ = {
-			isa = PBXGroup;
-			children = (
-				20FE3E3528A3C1BA0032A25D /* SwimTrackerTests.swift */,
-			);
-			path = SwimTrackerTests;
-			sourceTree = "<group>";
-		};
-		20FE3E3E28A3C1BA0032A25D /* SwimTrackerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				20FE3E3F28A3C1BA0032A25D /* SwimTrackerUITests.swift */,
-				20FE3E4128A3C1BA0032A25D /* SwimTrackerUITestsLaunchTests.swift */,
-			);
-			path = SwimTrackerUITests;
-			sourceTree = "<group>";
-		};
 		20FE3E4928A3C1BA0032A25D /* SwimTracker WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,9 +223,13 @@
 		20FE3E5428A3C1BC0032A25D /* SwimTracker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				20FE3E5528A3C1BC0032A25D /* ContentView.swift */,
+				20FE3E9228A3D1020032A25D /* StartView.swift */,
+				20FE3E9428A3D5140032A25D /* WorkoutView.swift */,
+				20FE3E9628A3F2970032A25D /* RingShape.swift */,
+				20FE3E9828A3F5DE0032A25D /* ActivityRingView.swift */,
 				20FE3E5728A3C1BC0032A25D /* SwimTrackerApp.swift */,
 				20FE3E5928A3C1BC0032A25D /* ComplicationController.swift */,
+				20FE3E9A28A3FADB0032A25D /* Double+Helpers.swift */,
 				20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */,
 				20FE3E6028A3C1BD0032A25D /* Info.plist */,
 				20FE3E5D28A3C1BD0032A25D /* Preview Content */,
@@ -263,19 +245,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		20FE3E6828A3C1BD0032A25D /* SwimTracker WatchKit AppTests */ = {
-			isa = PBXGroup;
-			children = (
-				20FE3E6928A3C1BD0032A25D /* SwimTracker_WatchKit_AppTests.swift */,
-			);
-			path = "SwimTracker WatchKit AppTests";
-			sourceTree = "<group>";
-		};
 		20FE3E7228A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */ = {
 			isa = PBXGroup;
 			children = (
 				20FE3E7328A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift */,
-				20FE3E7528A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITestsLaunchTests.swift */,
 			);
 			path = "SwimTracker WatchKit AppUITests";
 			sourceTree = "<group>";
@@ -531,7 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FE3E2728A3C1B90032A25D /* ContentView.swift in Sources */,
+				20B353A328A5049D003C5D24 /* LandingPageView.swift in Sources */,
 				20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,7 +513,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FE3E3628A3C1BA0032A25D /* SwimTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,8 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FE3E4028A3C1BA0032A25D /* SwimTrackerUITests.swift in Sources */,
-				20FE3E4228A3C1BA0032A25D /* SwimTrackerUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,8 +528,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				20FE3E5828A3C1BC0032A25D /* SwimTrackerApp.swift in Sources */,
-				20FE3E5628A3C1BC0032A25D /* ContentView.swift in Sources */,
+				20FE3E9728A3F2970032A25D /* RingShape.swift in Sources */,
 				20FE3E5A28A3C1BC0032A25D /* ComplicationController.swift in Sources */,
+				20FE3E9528A3D5140032A25D /* WorkoutView.swift in Sources */,
+				20FE3E9B28A3FADB0032A25D /* Double+Helpers.swift in Sources */,
+				20FE3E9328A3D1020032A25D /* StartView.swift in Sources */,
+				20FE3E9928A3F5DE0032A25D /* ActivityRingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +541,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FE3E6A28A3C1BD0032A25D /* SwimTracker_WatchKit_AppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +548,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FE3E7628A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITestsLaunchTests.swift in Sources */,
 				20FE3E7428A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
