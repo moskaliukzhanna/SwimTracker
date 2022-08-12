@@ -15,6 +15,8 @@
 		20B353AE28A53D33003C5D24 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AD28A53D33003C5D24 /* Record.swift */; };
 		20B353B028A541C7003C5D24 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AF28A541C7003C5D24 /* RecordStore.swift */; };
 		20B353B228A55AFA003C5D24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353B128A55AFA003C5D24 /* ErrorView.swift */; };
+		20D15EB328A65E4500EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB228A65E4500EE8B15 /* HealthKit.framework */; };
+		20D15EB628A6643200EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB528A6643200EE8B15 /* HealthKit.framework */; };
 		20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */; };
 		20FE3E2928A3C1BA0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2828A3C1BA0032A25D /* Assets.xcassets */; };
 		20FE3E2C28A3C1BA0032A25D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2B28A3C1BA0032A25D /* Preview Assets.xcassets */; };
@@ -91,6 +93,10 @@
 		20B353AD28A53D33003C5D24 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		20B353AF28A541C7003C5D24 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
 		20B353B128A55AFA003C5D24 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		20D15EB028A65E4500EE8B15 /* SwimTracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimTracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		20D15EB228A65E4500EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		20D15EB428A6643200EE8B15 /* SwimTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimTracker.entitlements; sourceTree = "<group>"; };
+		20D15EB528A6643200EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		20FE3E2128A3C1B90032A25D /* SwimTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerApp.swift; sourceTree = "<group>"; };
 		20FE3E2828A3C1BA0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D15EB628A6643200EE8B15 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D15EB328A65E4500EE8B15 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +156,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		20D15EB128A65E4500EE8B15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20D15EB528A6643200EE8B15 /* HealthKit.framework */,
+				20D15EB228A65E4500EE8B15 /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		20FE3E1828A3C1B90032A25D = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +173,7 @@
 				20FE3E5428A3C1BC0032A25D /* SwimTracker WatchKit Extension */,
 				20FE3E7228A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */,
 				20FE3E2228A3C1B90032A25D /* Products */,
+				20D15EB128A65E4500EE8B15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +191,7 @@
 		20FE3E2328A3C1B90032A25D /* SwimTracker */ = {
 			isa = PBXGroup;
 			children = (
+				20D15EB428A6643200EE8B15 /* SwimTracker.entitlements */,
 				20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */,
 				20B353A228A5049D003C5D24 /* LandingPageView.swift */,
 				20B353A928A5394C003C5D24 /* LandingPresenter.swift */,
@@ -205,6 +224,7 @@
 		20FE3E5428A3C1BC0032A25D /* SwimTracker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				20D15EB028A65E4500EE8B15 /* SwimTracker WatchKit Extension.entitlements */,
 				20B353A428A51E11003C5D24 /* Views */,
 				20FE3E5728A3C1BC0032A25D /* SwimTrackerApp.swift */,
 				20B353A728A51F1F003C5D24 /* WorkoutManager.swift */,
@@ -563,6 +583,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SwimTracker WatchKit Extension/SwimTracker WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -597,6 +618,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "SwimTracker WatchKit Extension/SwimTracker WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -690,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwimTracker/SwimTracker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -723,6 +746,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SwimTracker/SwimTracker.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
