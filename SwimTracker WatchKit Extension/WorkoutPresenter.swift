@@ -10,7 +10,8 @@ import Foundation
 protocol WorkoutPresenterProtocol {
     func startWorkout()
     func stopWorkout(date: Date)
-//    func updateState()
+//    func startTimerCoutdown()
+//    func stopTimerCoutdown()
 }
 
 class WorkoutPresenter {
@@ -19,6 +20,8 @@ class WorkoutPresenter {
     init(manager: WorkoutManagerProtocol) {
         self.manager = manager
     }
+    
+    
     
     
 }

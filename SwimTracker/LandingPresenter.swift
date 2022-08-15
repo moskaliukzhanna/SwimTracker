@@ -31,7 +31,7 @@ final class LandingPresenter: LandingPresenterProtocol {
             guard let self = self else { return }
             switch result {
             case .failure(let error):
-                self.delegate?.showErrorView(message: error.localizedDescription)
+                self.delegate?.showErrorView(message: error.description)
             case .success(let records):
                 self.delegate?.showRecords(records: records)
             }

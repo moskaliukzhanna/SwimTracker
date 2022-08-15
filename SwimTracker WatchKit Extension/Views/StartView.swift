@@ -19,7 +19,7 @@ struct StartView: View {
                 }
             }
             .background(
-                NavigationLink(destination: WorkoutView(), isActive: $isLinkActive) {
+                NavigationLink(destination: WorkoutView<StopWatchManager>(), isActive: $isLinkActive) {
                     EmptyView()
                 }
                     .hidden()

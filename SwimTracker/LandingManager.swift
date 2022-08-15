@@ -7,16 +7,23 @@
 
 import Foundation
 
-enum FetchError: Error {
-    case noRecords
+enum FetchResult: String, Error {
+    case noRecordsYet
+    
+    var description: String {
+        switch self {
+        case .noRecordsYet:
+            return "You have no records yet.\nStart your workout to add some"
+        }
+    }
 }
 
 protocol LandingManagerProtocol {
-    func fetchRecords(completion: @escaping (Result<[Record], Error>) -> Void)
+    func fetchRecords(completion: @escaping (Result<[Record], FetchResult>) -> Void)
 }
 
 final class LandingManager: LandingManagerProtocol {
-    func fetchRecords(completion: @escaping (Result<[Record], Error>) -> Void) {
-        completion(.failure(FetchError.noRecords))
+    func fetchRecords(completion: @escaping (Result<[Record], FetchResult>) -> Void) {
+        completion(.failure(FetchResult.noRecordsYet))
     }
 }

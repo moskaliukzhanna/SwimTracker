@@ -17,6 +17,7 @@
 		20B353B228A55AFA003C5D24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353B128A55AFA003C5D24 /* ErrorView.swift */; };
 		20D15EB328A65E4500EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB228A65E4500EE8B15 /* HealthKit.framework */; };
 		20D15EB628A6643200EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB528A6643200EE8B15 /* HealthKit.framework */; };
+		20EF794228AA3E2000D53803 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EF794128AA3E2000D53803 /* StopWatchManager.swift */; };
 		20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */; };
 		20FE3E2928A3C1BA0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2828A3C1BA0032A25D /* Assets.xcassets */; };
 		20FE3E2C28A3C1BA0032A25D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E2B28A3C1BA0032A25D /* Preview Assets.xcassets */; };
@@ -97,6 +98,7 @@
 		20D15EB228A65E4500EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		20D15EB428A6643200EE8B15 /* SwimTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimTracker.entitlements; sourceTree = "<group>"; };
 		20D15EB528A6643200EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		20EF794128AA3E2000D53803 /* StopWatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchManager.swift; sourceTree = "<group>"; };
 		20FE3E2128A3C1B90032A25D /* SwimTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwimTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTrackerApp.swift; sourceTree = "<group>"; };
 		20FE3E2828A3C1BA0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -227,9 +229,10 @@
 				20D15EB028A65E4500EE8B15 /* SwimTracker WatchKit Extension.entitlements */,
 				20B353A428A51E11003C5D24 /* Views */,
 				20FE3E5728A3C1BC0032A25D /* SwimTrackerApp.swift */,
-				20B353A728A51F1F003C5D24 /* WorkoutManager.swift */,
 				20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */,
+				20B353A728A51F1F003C5D24 /* WorkoutManager.swift */,
 				20FE3E5928A3C1BC0032A25D /* ComplicationController.swift */,
+				20EF794128AA3E2000D53803 /* StopWatchManager.swift */,
 				20FE3E9A28A3FADB0032A25D /* Double+Helpers.swift */,
 				20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */,
 				20FE3E6028A3C1BD0032A25D /* Info.plist */,
@@ -430,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20FE3E5828A3C1BC0032A25D /* SwimTrackerApp.swift in Sources */,
+				20EF794228AA3E2000D53803 /* StopWatchManager.swift in Sources */,
 				20FE3E9728A3F2970032A25D /* RingShape.swift in Sources */,
 				20B353A828A51F1F003C5D24 /* WorkoutManager.swift in Sources */,
 				20FE3E5A28A3C1BC0032A25D /* ComplicationController.swift in Sources */,
