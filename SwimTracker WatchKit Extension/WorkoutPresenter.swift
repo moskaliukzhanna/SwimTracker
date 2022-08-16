@@ -12,6 +12,7 @@ protocol WorkoutPresenterProtocol {
     func stopWorkout(date: Date)
 //    func startTimerCoutdown()
 //    func stopTimerCoutdown()
+    func authorizeHealthKit()
 }
 
 class WorkoutPresenter {
@@ -33,5 +34,9 @@ extension WorkoutPresenter: WorkoutPresenterProtocol {
     
     func stopWorkout(date: Date) {
         manager.stopWorkoutSession(date: date)
+    }
+    
+    func authorizeHealthKit() {
+        manager.authorizeHealthKit()
     }
 }
