@@ -17,7 +17,7 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
         let manager = WorkoutManager()
         presenter = WorkoutPresenter(manager: manager)
         presenter?.authorizeHealthKit()
-        presenter?.startWorkout()
+//        presenter?.startWorkout()
     }
     
     var body: some View {

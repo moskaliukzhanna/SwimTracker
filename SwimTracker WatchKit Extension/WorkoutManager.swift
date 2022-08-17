@@ -46,6 +46,7 @@ final class WorkoutManager: WorkoutManagerProtocol {
     }
     
     func authorizeHealthKit() {
+        print("Health data available \(HKHealthStore.isHealthDataAvailable() )")
         if HKHealthStore.isHealthDataAvailable() {
             let infoToRead = Set([
                 HKSampleType.quantityType(forIdentifier: .activeEnergyBurned)!,
@@ -59,9 +60,13 @@ final class WorkoutManager: WorkoutManagerProtocol {
                 HKObjectType.workoutType()
             ])
             
-            hkHealthStore.requestAuthorization(toShare: infoToWrite,
-                                               read: infoToRead) { sucess, error in
-                print("IS Succesful \(sucess)")
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                
+                self.hkHealthStore.requestAuthorization(toShare: infoToWrite,
+                                                   read: infoToRead) { sucess, error in
+                    print("IS Succesful \(sucess)")
+                }
             }
         }
     }

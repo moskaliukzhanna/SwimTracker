@@ -86,6 +86,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		202FB12A28AD2F90003F31C7 /* SwimTrackerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimTrackerRelease.entitlements; sourceTree = "<group>"; };
 		20B353A228A5049D003C5D24 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPresenter.swift; sourceTree = "<group>"; };
 		20B353A728A51F1F003C5D24 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
@@ -193,6 +194,7 @@
 		20FE3E2328A3C1B90032A25D /* SwimTracker */ = {
 			isa = PBXGroup;
 			children = (
+				202FB12A28AD2F90003F31C7 /* SwimTrackerRelease.entitlements */,
 				20D15EB428A6643200EE8B15 /* SwimTracker.entitlements */,
 				20FE3E2428A3C1B90032A25D /* SwimTrackerApp.swift */,
 				20B353A228A5049D003C5D24 /* LandingPageView.swift */,
@@ -743,7 +745,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -752,9 +754,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SwimTracker/SwimTracker.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = SwimTracker/SwimTrackerRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwimTracker/Preview Content\"";
 				DEVELOPMENT_TEAM = J99FJA3665;
@@ -775,11 +777,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhannamoskaliuk.test.SwimTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SwimTracker-dev";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
