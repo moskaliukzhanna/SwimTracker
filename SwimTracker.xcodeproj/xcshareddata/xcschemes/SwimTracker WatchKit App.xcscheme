@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "20FE3E6E28A3C1BD0032A25D"
+               BlueprintIdentifier = "207335C628AE59A000802F89"
                BuildableName = "SwimTracker WatchKit AppUITests.xctest"
                BlueprintName = "SwimTracker WatchKit AppUITests"
                ReferencedContainer = "container:SwimTracker.xcodeproj">
@@ -64,10 +64,8 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/SwimTracker WatchKit App">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "20FE3E4428A3C1BA0032A25D"
@@ -75,7 +73,7 @@
             BlueprintName = "SwimTracker WatchKit App"
             ReferencedContainer = "container:SwimTracker.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -83,10 +81,8 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.Carousel"
-         RemotePath = "/SwimTracker WatchKit App">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "20FE3E4428A3C1BA0032A25D"
@@ -94,16 +90,7 @@
             BlueprintName = "SwimTracker WatchKit App"
             ReferencedContainer = "container:SwimTracker.xcodeproj">
          </BuildableReference>
-      </RemoteRunnable>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "20FE3E4428A3C1BA0032A25D"
-            BuildableName = "SwimTracker WatchKit App.app"
-            BlueprintName = "SwimTracker WatchKit App"
-            ReferencedContainer = "container:SwimTracker.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

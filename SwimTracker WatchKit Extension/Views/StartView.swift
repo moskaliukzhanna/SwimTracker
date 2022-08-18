@@ -14,9 +14,13 @@ struct StartView: View {
             VStack(alignment: .center) {
                 Button(action: {
                     self.isLinkActive = true
-                }) {
+                        
+                })
+                
+                {
                     Text("Swim")
                 }
+                .accessibilityIdentifier("swim_button")
             }
             .background(
                 NavigationLink(destination: WorkoutView<StopWatchManager>(), isActive: $isLinkActive) {

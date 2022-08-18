@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207335CA28AE59A000802F89 /* SwimTracker_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207335C928AE59A000802F89 /* SwimTracker_WatchKit_AppUITests.swift */; };
 		20B353A328A5049D003C5D24 /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A228A5049D003C5D24 /* LandingPageView.swift */; };
 		20B353A628A51E50003C5D24 /* WorkoutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */; };
 		20B353A828A51F1F003C5D24 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353A728A51F1F003C5D24 /* WorkoutManager.swift */; };
@@ -28,7 +29,6 @@
 		20FE3E5A28A3C1BC0032A25D /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E5928A3C1BC0032A25D /* ComplicationController.swift */; };
 		20FE3E5C28A3C1BD0032A25D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */; };
 		20FE3E5F28A3C1BD0032A25D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FE3E5E28A3C1BD0032A25D /* Preview Assets.xcassets */; };
-		20FE3E7428A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E7328A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift */; };
 		20FE3E9328A3D1020032A25D /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9228A3D1020032A25D /* StartView.swift */; };
 		20FE3E9528A3D5140032A25D /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9428A3D5140032A25D /* WorkoutView.swift */; };
 		20FE3E9728A3F2970032A25D /* RingShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FE3E9628A3F2970032A25D /* RingShape.swift */; };
@@ -37,6 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		207335CD28AE59A100802F89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20FE3E1928A3C1B90032A25D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20FE3E4428A3C1BA0032A25D;
+			remoteInfo = "SwimTracker WatchKit App";
+		};
 		20FE3E4728A3C1BA0032A25D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 20FE3E1928A3C1B90032A25D /* Project object */;
@@ -50,13 +57,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 20FE3E4F28A3C1BC0032A25D;
 			remoteInfo = "SwimTracker WatchKit Extension";
-		};
-		20FE3E7028A3C1BD0032A25D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20FE3E1928A3C1B90032A25D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 20FE3E4428A3C1BA0032A25D;
-			remoteInfo = "SwimTracker WatchKit App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -87,6 +87,8 @@
 
 /* Begin PBXFileReference section */
 		202FB12A28AD2F90003F31C7 /* SwimTrackerRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimTrackerRelease.entitlements; sourceTree = "<group>"; };
+		207335C728AE59A000802F89 /* SwimTracker WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwimTracker WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		207335C928AE59A000802F89 /* SwimTracker_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTracker_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		20B353A228A5049D003C5D24 /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
 		20B353A528A51E50003C5D24 /* WorkoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutPresenter.swift; sourceTree = "<group>"; };
 		20B353A728A51F1F003C5D24 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
@@ -113,8 +115,6 @@
 		20FE3E5B28A3C1BD0032A25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20FE3E5E28A3C1BD0032A25D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20FE3E6028A3C1BD0032A25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20FE3E6F28A3C1BD0032A25D /* SwimTracker WatchKit AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwimTracker WatchKit AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		20FE3E7328A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwimTracker_WatchKit_AppUITests.swift; sourceTree = "<group>"; };
 		20FE3E9228A3D1020032A25D /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		20FE3E9428A3D5140032A25D /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		20FE3E9628A3F2970032A25D /* RingShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingShape.swift; sourceTree = "<group>"; };
@@ -123,6 +123,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		207335C428AE59A000802F89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20FE3E1E28A3C1B90032A25D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,16 +146,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FE3E6C28A3C1BD0032A25D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207335C828AE59A000802F89 /* SwimTracker WatchKit AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				207335C928AE59A000802F89 /* SwimTracker_WatchKit_AppUITests.swift */,
+			);
+			path = "SwimTracker WatchKit AppUITests";
+			sourceTree = "<group>";
+		};
 		20B353A428A51E11003C5D24 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +183,7 @@
 				20FE3E2328A3C1B90032A25D /* SwimTracker */,
 				20FE3E4928A3C1BA0032A25D /* SwimTracker WatchKit App */,
 				20FE3E5428A3C1BC0032A25D /* SwimTracker WatchKit Extension */,
-				20FE3E7228A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */,
+				207335C828AE59A000802F89 /* SwimTracker WatchKit AppUITests */,
 				20FE3E2228A3C1B90032A25D /* Products */,
 				20D15EB128A65E4500EE8B15 /* Frameworks */,
 			);
@@ -187,7 +195,7 @@
 				20FE3E2128A3C1B90032A25D /* SwimTracker.app */,
 				20FE3E4528A3C1BA0032A25D /* SwimTracker WatchKit App.app */,
 				20FE3E5028A3C1BC0032A25D /* SwimTracker WatchKit Extension.appex */,
-				20FE3E6F28A3C1BD0032A25D /* SwimTracker WatchKit AppUITests.xctest */,
+				207335C728AE59A000802F89 /* SwimTracker WatchKit AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,17 +261,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		20FE3E7228A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				20FE3E7328A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift */,
-			);
-			path = "SwimTracker WatchKit AppUITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		207335C628AE59A000802F89 /* SwimTracker WatchKit AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207335CF28AE59A100802F89 /* Build configuration list for PBXNativeTarget "SwimTracker WatchKit AppUITests" */;
+			buildPhases = (
+				207335C328AE59A000802F89 /* Sources */,
+				207335C428AE59A000802F89 /* Frameworks */,
+				207335C528AE59A000802F89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207335CE28AE59A100802F89 /* PBXTargetDependency */,
+			);
+			name = "SwimTracker WatchKit AppUITests";
+			productName = "SwimTracker WatchKit AppUITests";
+			productReference = 207335C728AE59A000802F89 /* SwimTracker WatchKit AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		20FE3E2028A3C1B90032A25D /* SwimTracker */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20FE3E8128A3C1BD0032A25D /* Build configuration list for PBXNativeTarget "SwimTracker" */;
@@ -317,24 +335,6 @@
 			productReference = 20FE3E5028A3C1BC0032A25D /* SwimTracker WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
-		20FE3E6E28A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 20FE3E8D28A3C1BD0032A25D /* Build configuration list for PBXNativeTarget "SwimTracker WatchKit AppUITests" */;
-			buildPhases = (
-				20FE3E6B28A3C1BD0032A25D /* Sources */,
-				20FE3E6C28A3C1BD0032A25D /* Frameworks */,
-				20FE3E6D28A3C1BD0032A25D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				20FE3E7128A3C1BD0032A25D /* PBXTargetDependency */,
-			);
-			name = "SwimTracker WatchKit AppUITests";
-			productName = "SwimTracker WatchKit AppUITests";
-			productReference = 20FE3E6F28A3C1BD0032A25D /* SwimTracker WatchKit AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -345,6 +345,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					207335C628AE59A000802F89 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 20FE3E4428A3C1BA0032A25D;
+					};
 					20FE3E2028A3C1B90032A25D = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -353,10 +357,6 @@
 					};
 					20FE3E4F28A3C1BC0032A25D = {
 						CreatedOnToolsVersion = 13.4;
-					};
-					20FE3E6E28A3C1BD0032A25D = {
-						CreatedOnToolsVersion = 13.4;
-						TestTargetID = 20FE3E4428A3C1BA0032A25D;
 					};
 				};
 			};
@@ -376,12 +376,19 @@
 				20FE3E2028A3C1B90032A25D /* SwimTracker */,
 				20FE3E4428A3C1BA0032A25D /* SwimTracker WatchKit App */,
 				20FE3E4F28A3C1BC0032A25D /* SwimTracker WatchKit Extension */,
-				20FE3E6E28A3C1BD0032A25D /* SwimTracker WatchKit AppUITests */,
+				207335C628AE59A000802F89 /* SwimTracker WatchKit AppUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		207335C528AE59A000802F89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20FE3E1F28A3C1B90032A25D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,16 +415,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FE3E6D28A3C1BD0032A25D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		207335C328AE59A000802F89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207335CA28AE59A000802F89 /* SwimTracker_WatchKit_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		20FE3E1D28A3C1B90032A25D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -449,17 +457,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		20FE3E6B28A3C1BD0032A25D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				20FE3E7428A3C1BD0032A25D /* SwimTracker_WatchKit_AppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		207335CE28AE59A100802F89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 20FE3E4428A3C1BA0032A25D /* SwimTracker WatchKit App */;
+			targetProxy = 207335CD28AE59A100802F89 /* PBXContainerItemProxy */;
+		};
 		20FE3E4828A3C1BA0032A25D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 20FE3E4428A3C1BA0032A25D /* SwimTracker WatchKit App */;
@@ -470,14 +475,52 @@
 			target = 20FE3E4F28A3C1BC0032A25D /* SwimTracker WatchKit Extension */;
 			targetProxy = 20FE3E5228A3C1BC0032A25D /* PBXContainerItemProxy */;
 		};
-		20FE3E7128A3C1BD0032A25D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 20FE3E4428A3C1BA0032A25D /* SwimTracker WatchKit App */;
-			targetProxy = 20FE3E7028A3C1BD0032A25D /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		207335D028AE59A100802F89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J99FJA3665;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhannamoskaliuk.test.SwimTracker-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SwimTracker WatchKit App";
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Debug;
+		};
+		207335D128AE59A100802F89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J99FJA3665;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zhannamoskaliuk.test.SwimTracker-WatchKit-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SwimTracker WatchKit App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.5;
+			};
+			name = Release;
+		};
 		20FE3E7728A3C1BD0032A25D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -514,6 +557,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -572,6 +616,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -792,52 +838,18 @@
 			};
 			name = Release;
 		};
-		20FE3E8E28A3C1BD0032A25D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J99FJA3665;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zhannamoskaliuk.test.SwimTracker-WatchKit-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SwimTracker-watchuitests-dev";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "SwimTracker WatchKit App";
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Debug;
-		};
-		20FE3E8F28A3C1BD0032A25D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J99FJA3665;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zhannamoskaliuk.test.SwimTracker-WatchKit-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "SwimTracker-watchuitests-dev";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "SwimTracker WatchKit App";
-				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.5;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		207335CF28AE59A100802F89 /* Build configuration list for PBXNativeTarget "SwimTracker WatchKit AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207335D028AE59A100802F89 /* Debug */,
+				207335D128AE59A100802F89 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		20FE3E1C28A3C1B90032A25D /* Build configuration list for PBXProject "SwimTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -870,15 +882,6 @@
 			buildConfigurations = (
 				20FE3E8228A3C1BD0032A25D /* Debug */,
 				20FE3E8328A3C1BD0032A25D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20FE3E8D28A3C1BD0032A25D /* Build configuration list for PBXNativeTarget "SwimTracker WatchKit AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20FE3E8E28A3C1BD0032A25D /* Debug */,
-				20FE3E8F28A3C1BD0032A25D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
