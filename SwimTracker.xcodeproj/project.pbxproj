@@ -16,6 +16,7 @@
 		20B353AE28A53D33003C5D24 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AD28A53D33003C5D24 /* Record.swift */; };
 		20B353B028A541C7003C5D24 /* RecordStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353AF28A541C7003C5D24 /* RecordStore.swift */; };
 		20B353B228A55AFA003C5D24 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B353B128A55AFA003C5D24 /* ErrorView.swift */; };
+		20B89A7828B3C170002C321F /* HKWorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B89A7728B3C170002C321F /* HKWorkoutManager.swift */; };
 		20D15EB328A65E4500EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB228A65E4500EE8B15 /* HealthKit.framework */; };
 		20D15EB628A6643200EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB528A6643200EE8B15 /* HealthKit.framework */; };
 		20EF794228AA3E2000D53803 /* StopWatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EF794128AA3E2000D53803 /* StopWatchManager.swift */; };
@@ -97,6 +98,7 @@
 		20B353AD28A53D33003C5D24 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		20B353AF28A541C7003C5D24 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
 		20B353B128A55AFA003C5D24 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		20B89A7728B3C170002C321F /* HKWorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKWorkoutManager.swift; sourceTree = "<group>"; };
 		20D15EB028A65E4500EE8B15 /* SwimTracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimTracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		20D15EB228A65E4500EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		20D15EB428A6643200EE8B15 /* SwimTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwimTracker.entitlements; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				20B353A228A5049D003C5D24 /* LandingPageView.swift */,
 				20B353A928A5394C003C5D24 /* LandingPresenter.swift */,
 				20B353AB28A53989003C5D24 /* LandingManager.swift */,
+				20B89A7728B3C170002C321F /* HKWorkoutManager.swift */,
 				20B353AF28A541C7003C5D24 /* RecordStore.swift */,
 				20B353AD28A53D33003C5D24 /* Record.swift */,
 				20FE3E2828A3C1BA0032A25D /* Assets.xcassets */,
@@ -432,6 +435,7 @@
 			files = (
 				20B353A328A5049D003C5D24 /* LandingPageView.swift in Sources */,
 				20B353AA28A5394C003C5D24 /* LandingPresenter.swift in Sources */,
+				20B89A7828B3C170002C321F /* HKWorkoutManager.swift in Sources */,
 				20B353AE28A53D33003C5D24 /* Record.swift in Sources */,
 				20FE3E2528A3C1B90032A25D /* SwimTrackerApp.swift in Sources */,
 				20B353B228A55AFA003C5D24 /* ErrorView.swift in Sources */,

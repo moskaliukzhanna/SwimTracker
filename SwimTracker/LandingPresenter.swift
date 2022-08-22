@@ -8,6 +8,7 @@
 import Foundation
 
 protocol LandingPresenterProtocol {
+    func hkAuthorization()
     func fetchRecords()
 }
 
@@ -24,6 +25,10 @@ final class LandingPresenter: LandingPresenterProtocol {
     init(manager: LandingManagerProtocol, delegate: LandingPresenterDelegate?) {
         self.manager = manager
         self.delegate = delegate
+    }
+    
+    func hkAuthorization() {
+        manager.authorizeHK()
     }
     
     func fetchRecords() {

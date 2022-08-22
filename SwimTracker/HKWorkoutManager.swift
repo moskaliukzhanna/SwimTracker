@@ -1,49 +1,16 @@
 //
-//  WorkoutManager.swift
-//  SwimTracker WatchKit Extension
+//  HKWorkoutManager.swift
+//  SwimTracker
 //
-//  Created by Zhanna Moskaliuk on 11.08.2022.
+//  Created by Zhanna Moskaliuk on 22.08.2022.
 //
 
 import Foundation
 import HealthKit
 
-protocol WorkoutManagerProtocol {
-    func startWorkoutSession()
-    func stopWorkoutSession(date: Date)
-    func authorizeHealthKit()
-}
-
-final class WorkoutManager: WorkoutManagerProtocol {
-    private var workoutSession: HKWorkoutSession?
+final class HKWorkoutManager {
+    
     private let hkHealthStore = HKHealthStore()
-    
-    init() {
-        configureWorkoutSession()
-    }
-    
-    private func configureWorkoutSession() {
-        let configuration = HKWorkoutConfiguration()
-        configuration.activityType = .swimming
-        configuration.lapLength = HKQuantity(unit: .meter(), doubleValue: 50.0)
-        configuration.swimmingLocationType = .pool
-        
-        do {
-            try self.workoutSession = HKWorkoutSession(healthStore: hkHealthStore,
-                                                       configuration: configuration)
-        } catch  {
-            print("Failed to created workoutSession :\(error)")
-        }
-    }
-    
-    func startWorkoutSession() {
-//        fetchWorkoutData()
-        workoutSession?.startActivity(with: Date())
-    }
-    
-    func stopWorkoutSession(date: Date) {
-        workoutSession?.stopActivity(with: date)
-    }
     
     func authorizeHealthKit() {
         print("Health data available \(HKHealthStore.isHealthDataAvailable() )")
@@ -123,4 +90,6 @@ final class WorkoutManager: WorkoutManagerProtocol {
 
     }
 }
+
+
 

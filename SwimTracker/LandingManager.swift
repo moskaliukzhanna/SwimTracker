@@ -19,10 +19,17 @@ enum FetchResult: String, Error {
 }
 
 protocol LandingManagerProtocol {
+    func authorizeHK()
     func fetchRecords(completion: @escaping (Result<[Record], FetchResult>) -> Void)
 }
 
 final class LandingManager: LandingManagerProtocol {
+    private let workoutManager = HKWorkoutManager()
+    
+    func authorizeHK() {
+        workoutManager.authorizeHealthKit()
+    }
+    
     func fetchRecords(completion: @escaping (Result<[Record], FetchResult>) -> Void) {
         completion(.failure(FetchResult.noRecordsYet))
     }

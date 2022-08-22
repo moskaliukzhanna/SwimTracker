@@ -37,7 +37,8 @@ struct LandingPageView: View {
         .navigationBarTitleDisplayMode(.inline)
         
         .onAppear {
-            presenter.fetchRecords()
+            presenter.hkAuthorization()
+//            presenter.fetchRecords()
         }
         
     }
