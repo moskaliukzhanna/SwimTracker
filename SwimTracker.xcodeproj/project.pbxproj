@@ -98,6 +98,7 @@
 		20B353AD28A53D33003C5D24 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		20B353AF28A541C7003C5D24 /* RecordStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordStore.swift; sourceTree = "<group>"; };
 		20B353B128A55AFA003C5D24 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		20B7F56F28B4F36900226BD8 /* SwimTracker-WatchKit-AppUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwimTracker-WatchKit-AppUITests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		20B89A7728B3C170002C321F /* HKWorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKWorkoutManager.swift; sourceTree = "<group>"; };
 		20D15EB028A65E4500EE8B15 /* SwimTracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimTracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		20D15EB228A65E4500EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -154,6 +155,7 @@
 		207335C828AE59A000802F89 /* SwimTracker WatchKit AppUITests */ = {
 			isa = PBXGroup;
 			children = (
+				20B7F56F28B4F36900226BD8 /* SwimTracker-WatchKit-AppUITests-Info.plist */,
 				207335C928AE59A000802F89 /* SwimTracker_WatchKit_AppUITests.swift */,
 			);
 			path = "SwimTracker WatchKit AppUITests";
@@ -490,6 +492,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J99FJA3665;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwimTracker-WatchKit-AppUITests-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhannamoskaliuk.test.SwimTracker-WatchKit-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -511,6 +515,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J99FJA3665;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwimTracker-WatchKit-AppUITests-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.zhannamoskaliuk.test.SwimTracker-WatchKit-AppUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -652,6 +658,8 @@
 				INFOPLIST_FILE = "SwimTracker WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "SwimTracker WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = SwimTracker_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Swim tracker would like to get access to your health data";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -687,6 +695,8 @@
 				INFOPLIST_FILE = "SwimTracker WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "SwimTracker WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = SwimTracker_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Swim tracker would like to get access to your health data";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
