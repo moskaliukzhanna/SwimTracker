@@ -4,7 +4,7 @@
 <dict>
 	<key> NSHealthShareUsageDescription</key>
 	<string>Swim tracker would like to read your health data</string>
-	<key> NSHealthUpdateUsageDescription</key>
+	<key>NSHealthUpdateUsageDescription</key>
 	<string>Swim tracker would like to write to your health data</string>
 </dict>
 </plist>

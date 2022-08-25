@@ -21,22 +21,19 @@ class WorkoutPresenter {
     init(manager: WorkoutManagerProtocol) {
         self.manager = manager
     }
-    
-    
-    
-    
 }
 
 extension WorkoutPresenter: WorkoutPresenterProtocol {
     func startWorkout() {
-        manager.startWorkoutSession()
+//        manager.startWorkoutSession()
     }
     
     func stopWorkout(date: Date) {
-        manager.stopWorkoutSession(date: date)
+//        manager.stopWorkoutSession(date: date)
     }
     
     func authorizeHealthKit() {
+        print("0")
         manager.authorizeHealthKit()
     }
 }

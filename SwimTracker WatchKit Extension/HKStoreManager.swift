@@ -1,100 +1,105 @@
 //
-//  HKWorkoutManager.swift
+//  HKStoreManager.swift
 //  SwimTracker
 //
-//  Created by Zhanna Moskaliuk on 22.08.2022.
+//  Created by Zhanna Moskaliuk on 25.08.2022.
 //
 
 import Foundation
 import HealthKit
 
-final class HKWorkoutManager {
-    
+protocol HKStoreProtocol {
+    func authorizeHealthKit()
+    func fetchDistanceSwiming()
+}
+
+final class HKStoreManager: HKStoreProtocol {
+    // make sure there is only one instance of hkHealtStore
     private let hkHealthStore = HKHealthStore()
     
     func authorizeHealthKit() {
+        print("2")
         print("Health data available \(HKHealthStore.isHealthDataAvailable() )")
         
         if HKHealthStore.isHealthDataAvailable() {
             let typesToRead = Set([
                 HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
+                HKObjectType.quantityType(forIdentifier: .distanceSwimming)!,
                 HKObjectType.activitySummaryType()
             ])
             
             let typesToWrite = Set([
                 HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!,
-              
+                HKObjectType.quantityType(forIdentifier: .distanceSwimming)!
+                
             ])
             
             self.hkHealthStore.requestAuthorization(toShare: typesToWrite,
                                                     read: typesToRead) { [weak self] sucess, error in
                 guard let self = self else { return }
-                print("IS Succesful \(sucess)")
-                if sucess {
-                    //
-                    print(self.hkHealthStore.authorizationStatus(for: HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!).rawValue)
-                    
-                    
-//                    DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
-                        self.fetchWorkoutData()
-//                    }
-                    
+                let sharingStatusForCalories = self.hkHealthStore.authorizationStatus(for: HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!)
+                if sucess && sharingStatusForCalories == .sharingAuthorized {
+                    self.fetchAppleWorkoutSummaries()
+                    self.fetchDistanceSwiming()
                 }
             }
         }
     }
     
-    func fetchWorkoutData() {
+    // fetch workout summaries from healthkit
+    // active calories burned for now
+    func fetchAppleWorkoutSummaries(date: Date = Date()) {
         let calendar = Calendar.autoupdatingCurrent
-        
         var dateComponents = calendar.dateComponents(
             [ .year, .month, .day ],
-            from: Date()
+            from: date
         )
         
-        // This line is required to make the whole thing work
         dateComponents.calendar = calendar
         dateComponents.day = 1
-        let startDate = calendar.date(byAdding: .hour, value: -12, to: Date())
-        let endDate = Date()
         
         let predicate = HKQuery.predicateForActivitySummary(with: dateComponents)
         let query = HKActivitySummaryQuery(predicate: predicate) { (query, summaries, error) in
-        
-            print("2")
-            
             guard let summaries = summaries, summaries.count > 0, let summary = summaries.first
             else {
-                // No data returned. Perhaps check for error
-                print("3")
                 if let error = error {
                     print("Error - \(error)")
                 }
                 return
             }
-
+            
             let energyUnit   = HKUnit.kilocalorie()
-            //            let standUnit    = HKUnit.count()
-            //            let exerciseUnit = HKUnit.second()
-
             let energy   = summary.activeEnergyBurned.doubleValue(for: energyUnit)
-            //            let stand    = summary.appleStandHours.doubleValue(for: standUnit)
-            //            let exercise = summary.appleExerciseTime.doubleValue(for: exerciseUnit)
-            //
             let energyGoal   = summary.activeEnergyBurnedGoal.doubleValue(for: energyUnit)
-            //            let standGoal    = summary.appleStandHoursGoal.doubleValue(for: standUnit)
-            //            let exerciseGoal = summary.appleExerciseTimeGoal.doubleValue(for: exerciseUnit)
-
             let energyProgress   = energyGoal == 0 ? 0 : energy / energyGoal
-            //            let standProgress    = standGoal == 0 ? 0 : stand / standGoal
-            //            let exerciseProgress = exerciseGoal == 0 ? 0 : exercise / exerciseGoal
-            print("4")
             print("\(energyProgress)")
-
         }
         hkHealthStore.execute(query)
-        print("1")
+    }
+    
+    
+    
+    func fetchDistanceSwiming() {
+        HKUnit.meter()
+        guard let sampleType = HKObjectType.quantityType(forIdentifier: .distanceSwimming) else {
+            print("Couldn't fetch distanceSwimming quantity type")
+            return
+        }
+        // fetching the most recent result
+        let predicate = HKQuery.predicateForSamples(withStart: Date.distantPast, end: Date(), options: .strictEndDate)
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate, ascending: false)
+        let query = HKSampleQuery(sampleType: sampleType,
+                                  predicate: predicate,
+                                  limit: Int(HKObjectQueryNoLimit),
+                                  sortDescriptors: [sortDescriptor]) { (_, results, error) in
+            if let error = error {
+                print("Error - \(error)")
+                return
+            }
+        }
         
-        
+        self.hkHealthStore.execute(query)
     }
 }
+
+

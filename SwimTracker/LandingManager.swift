@@ -24,7 +24,7 @@ protocol LandingManagerProtocol {
 }
 
 final class LandingManager: LandingManagerProtocol {
-    private let workoutManager = HKWorkoutManager()
+    private let workoutManager = HKStoreManager()
     
     func authorizeHK() {
         workoutManager.authorizeHealthKit()

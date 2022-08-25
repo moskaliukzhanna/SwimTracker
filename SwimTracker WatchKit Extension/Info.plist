@@ -4,6 +4,8 @@
 <dict>
 	<key> NSHealthShareUsageDescription</key>
 	<string>SwimTracker woud like to read your health records</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>SwimTracker woud like to read your health records</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
@@ -14,8 +16,6 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
-	<key>NSHealthUpdateUsageDescription </key>
-	<string>SwimTracker woud like to write into yout health records</string>
 	<key>UIBackgroundModes</key>
 	<array/>
 	<key>WKBackgroundModes</key>
