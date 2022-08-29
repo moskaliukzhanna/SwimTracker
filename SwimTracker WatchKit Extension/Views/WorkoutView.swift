@@ -24,10 +24,9 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
             VStack {
                 Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
                 if isWorkoutView {
-                    PulseRingView(color: .blue, seconds: stopWatchManager.secondsElapsed)
-                        .frame(width: 80, height: 80)
-                    
-                    
+                    PulseRingView(foregroundColors: [.blue.opacity(0.8), .blue.opacity(0.5)],
+                                  seconds: stopWatchManager.secondsElapsed)
+                    .frame(width: 80, height: 80)
                 } else {
                     ActivityRingView(ringWidth: 10,
                                      percent: 5,

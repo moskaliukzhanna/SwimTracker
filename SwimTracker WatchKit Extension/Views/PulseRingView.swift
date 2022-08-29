@@ -13,20 +13,25 @@ struct PulseRingView: View {
     private var seconds: Double
     
     private let ringWidth: CGFloat
-    private let color: Color
+    private let colors: [Color]
     
     
-    init(ringWidth: CGFloat = 10, color: Color = .white, seconds: Double) {
+    init(ringWidth: CGFloat = 10, foregroundColors: [Color] = [.white, .white], seconds: Double) {
         self.ringWidth = ringWidth
-        self.color = color
+        self.colors = foregroundColors
         self.seconds = seconds
+    }
+    
+    var ringGradient: AngularGradient {
+        let gradient = createRingGradient(colors: colors)
+        return gradient
     }
     
     var body: some View {
         RingShape()
             .stroke(style: StrokeStyle(lineWidth: self.ringWidth, lineCap: .round))
             .scale(self.isOpen ? 0.5 : 1.0)
-            .fill(self.color)
+            .fill(ringGradient)
             .frame(width: 80, height: 80, alignment: .center)
             .animation(.linear, value: self.isOpen)
             .onChange(of: seconds) { newValue in

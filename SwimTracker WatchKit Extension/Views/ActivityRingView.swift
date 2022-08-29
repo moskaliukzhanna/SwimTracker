@@ -42,12 +42,10 @@ struct ActivityRingView: View {
         self.foregroundColors.last ?? .black
     }
     private var ringGradient: AngularGradient {
-        AngularGradient(
-            gradient: Gradient(colors: self.foregroundColors),
-            center: .center,
-            startAngle: Angle(degrees: self.gradientStartAngle),
-            endAngle: Angle(degrees: relativePercentageAngle)
-        )
+        let gradient = self.createRingGradient(colors: self.foregroundColors,
+                                               gradientStartAngle: self.gradientStartAngle,
+                                               relativePercentageAngle: relativePercentageAngle)
+        return gradient
     }
     
     var body: some View {
