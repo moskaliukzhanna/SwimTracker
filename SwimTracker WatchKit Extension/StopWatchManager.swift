@@ -30,8 +30,8 @@ final class StopWatchManager: ObservableObject, StopWatchManagerProtocol {
     
     func start() {
         state = .runnning
-        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            self.secondsElapsed += 0.1
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.secondsElapsed += 1.0
         }
     }
     

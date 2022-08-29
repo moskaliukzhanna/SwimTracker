@@ -11,6 +11,7 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
     var presenter: WorkoutPresenterProtocol?
     @ObservedObject var stopWatchManager: Manager
     @Environment(\.dismiss) var dismiss
+    @State private var isWorkoutView = true
     
     init() {
         stopWatchManager = StopWatchManager() as! Manager
@@ -22,13 +23,19 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
         NavigationView {
             VStack {
                 Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
-                ActivityRingView(ringWidth: 10,
-                                 percent: 90,
-                                 backgroundColor: .purple.opacity(0.1),
-                                 foregroundColors: [.purple, .pink])
-                .frame(width: 80, height: 80)
-                .previewLayout(.sizeThatFits)
-                
+                if isWorkoutView {
+                    PulseRingView(color: .blue, seconds: stopWatchManager.secondsElapsed)
+                        .frame(width: 80, height: 80)
+                    
+                    
+                } else {
+                    ActivityRingView(ringWidth: 10,
+                                     percent: 5,
+                                     backgroundColor: .purple.opacity(0.1),
+                                     foregroundColors: [.purple, .pink])
+                    .frame(width: 80, height: 80)
+                    .previewLayout(.sizeThatFits)
+                }
                 if stopWatchManager.state == .runnning {
                     HStack {
                         Button { self.stopWatchManager.pause() }
@@ -57,6 +64,9 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
         .onDisappear {
             presenter?.stopWorkout(date: Date())
             stopWatchManager.stop()
+        }
+        .onTapGesture {
+            isWorkoutView.toggle()
         }
     }
     
