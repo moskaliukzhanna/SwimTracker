@@ -22,38 +22,70 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
     var body: some View {
         NavigationView {
             VStack {
-                Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
-                if isWorkoutView {
-                    PulseRingView(foregroundColors: [.blue.opacity(0.8), .blue.opacity(0.5)],
-                                  seconds: stopWatchManager.secondsElapsed)
-                    .frame(width: 80, height: 80)
-                } else {
-                    ActivityRingView(ringWidth: 10,
-                                     percent: 5,
-                                     backgroundColor: .purple.opacity(0.1),
-                                     foregroundColors: [.purple, .pink])
-                    .frame(width: 80, height: 80)
-                    .previewLayout(.sizeThatFits)
-                }
-                if stopWatchManager.state == .runnning {
-                    HStack {
-                        Button { self.stopWatchManager.pause() }
-                    label: { Text("Pause") }
+                VStack {
+                    Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
+                    if isWorkoutView {
+                        PulseRingView(foregroundColors: [.blue.opacity(0.8), .blue.opacity(0.5)],
+                                      seconds: stopWatchManager.secondsElapsed)
+                        .frame(width: 80, height: 80)
+                    } else {
+                        ActivityRingView(ringWidth: 10,
+                                         percent: 5,
+                                         backgroundColor: .purple.opacity(0.1),
+                                         foregroundColors: [.purple, .pink])
+                        .frame(width: 80, height: 80)
+                        .previewLayout(.sizeThatFits)
                     }
+                    Spacer()
                 }
                 
-                if stopWatchManager.state == .paused {
+                .onTapGesture {
+                    isWorkoutView.toggle()
+                }
+                
+                VStack {
                     HStack {
-                        Button { self.stopWatchManager.resume() }
-                    label: { Text("Resume") }
-                        Button { endWorkSession() }
-                    label: { Text("Stop")}
+                        switch stopWatchManager.state {
+                        case .runnning:
+                            Button(action: {
+                                stopWatchManager.pause()
+                                
+                            }) {
+                                Image("pause")
+                                    .resizable()
+                                    .frame(width: 20, height: 20, alignment: .center)
+                            }
+                        case .paused:
+                            Button(action: {
+                                endWorkSession()
+                                
+                            }) {
+                                Image("finish")
+                                    .resizable()
+                                    .frame(width: 20, height: 20, alignment: .center)
+                            }
+                            Spacer().frame(width: 20, height: 20)
+                            Button(action: { endWorkSession() }) {
+                                Image("close")
+                                    .resizable()
+                                    .frame(width: 20, height: 20, alignment: .center)
+                            }
+                        default:
+                            EmptyView()
+                        }
                     }
                     HStack {
-                        Button { endWorkSession() }
-                    label: { Text("End")}
+                        if stopWatchManager.state == .paused {
+                            Button(action: {stopWatchManager.resume() }) {
+                                
+                                Image("swimming")
+                                    .resizable()
+                                    .frame(width: 25, height: 25, alignment: .center)
+                            }
+                        }
                     }
                 }
+                .frame(width: 120, height: 30)
             }
         }
         .onAppear {
@@ -63,9 +95,6 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
         .onDisappear {
             presenter?.stopWorkout(date: Date())
             stopWatchManager.stop()
-        }
-        .onTapGesture {
-            isWorkoutView.toggle()
         }
     }
     
