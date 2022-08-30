@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ErrorView: View {
-    
     private let message: String
     
     init(errorMessage: String) {
         self.message = errorMessage
     }
+    
     var body: some View {
         VStack {
             Image("norecords")
