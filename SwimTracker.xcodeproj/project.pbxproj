@@ -221,11 +221,11 @@
 				20B353A228A5049D003C5D24 /* LandingPageView.swift */,
 				20B353A928A5394C003C5D24 /* LandingPresenter.swift */,
 				20B353AB28A53989003C5D24 /* LandingManager.swift */,
+				20B353B128A55AFA003C5D24 /* ErrorView.swift */,
 				20B353AF28A541C7003C5D24 /* RecordStore.swift */,
 				20B353AD28A53D33003C5D24 /* Record.swift */,
 				20FE3E2828A3C1BA0032A25D /* Assets.xcassets */,
 				20FE3E2A28A3C1BA0032A25D /* Preview Content */,
-				20B353B128A55AFA003C5D24 /* ErrorView.swift */,
 			);
 			path = SwimTracker;
 			sourceTree = "<group>";

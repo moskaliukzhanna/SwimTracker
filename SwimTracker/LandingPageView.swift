@@ -29,19 +29,27 @@ struct LandingPageView: View {
                 return AnyView(EmptyView())
             case .error(let error):
                 return  AnyView(ErrorView(errorMessage: error))
+                
+                
             case .loaded( _):
                 return AnyView(EmptyView())
             }
+            
+            
         }
         .navigationTitle("Welcome back!")
         .navigationBarTitleDisplayMode(.inline)
         
         .onAppear {
             presenter.hkAuthorization()
-//            presenter.fetchRecords()
+            presenter.fetchRecords()
         }
         
     }
+    
+//    private func createEmptyRecordsView() -> AnyView {
+//        let image = Image("swimming")
+//    }
 }
 
 

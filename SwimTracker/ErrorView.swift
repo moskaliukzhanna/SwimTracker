@@ -15,10 +15,16 @@ struct ErrorView: View {
         self.message = errorMessage
     }
     var body: some View {
-        Text(message)
-            .multilineTextAlignment(.center)
-            .font(.title)
-            .foregroundColor(.red)
+        VStack {
+            Image("norecords")
+                .resizable()
+                .frame(width: 100, height: 100, alignment: .center)
+            Spacer().frame(width: 20, height: 20, alignment: .center)
+            Text(message)
+                .multilineTextAlignment(.center)
+                .font(.title)
+                .foregroundColor(.red)
+        }
     }
 }
 
