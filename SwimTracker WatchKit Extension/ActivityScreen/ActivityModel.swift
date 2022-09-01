@@ -9,7 +9,7 @@ import Foundation
 import HealthKit
 
 protocol ActivityModelProtocol {
-    func authorizeHealthKit()
+    func authorizeHealthKit() async -> Bool
     func startWorkoutSession()
     func stopWorkoutSession()
     func pauseWorkoutSession()
@@ -24,8 +24,9 @@ final class ActivityModel: ActivityModelProtocol {
         self.manager = WorkoutManager()
     }
     
-    func authorizeHealthKit() {
-        manager.authorizeHealthKit()
+    func authorizeHealthKit() async -> Bool {
+       let isAuthorized = await manager.authorizeHealthKit()
+        return isAuthorized
     }
     
     func workoutSessionStatus() -> HKWorkoutSessionState {

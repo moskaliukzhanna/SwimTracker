@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ActivityPresenterProtocol {
-    func authorizeHealthKit()
+    func authorizeHealthKit() async -> Bool
     func startWorkout()
     func stopWorkout(date: Date)
     func pauseWorkout()
@@ -22,9 +22,10 @@ final class ActivityPresenter: ActivityPresenterProtocol {
         self.manager = manager
     }
     
-    func authorizeHealthKit() {
+    func authorizeHealthKit() async -> Bool {
         print("0")
-        manager.authorizeHealthKit()
+        let isAuthorized = await manager.authorizeHealthKit()
+        return isAuthorized
     }
     
     func startWorkout() {

@@ -20,7 +20,7 @@ enum FetchResult: String, Error {
 }
 
 protocol LandingManagerProtocol {
-    func authorizeHK()
+    func authorizeHK() async -> Bool
     func fetchRecords(completion: @escaping (Result<[Record], FetchResult>) -> Void)
 }
 
@@ -32,8 +32,9 @@ final class LandingManager: LandingManagerProtocol {
         self.workoutManager = HKStoreManager(healthStore: hkStore)
     }
     
-    func authorizeHK() {
-        workoutManager.authorizeHealthKit()
+    func authorizeHK() async -> Bool {
+        let isAuthorized = await workoutManager.authorizeHealthKit()
+        return isAuthorized
     }
     
     func fetchRecords(completion: @escaping (Result<[Record], FetchResult>) -> Void) {

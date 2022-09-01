@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LandingPresenterProtocol {
-    func hkAuthorization()
+    func hkAuthorization() async -> Bool
     func fetchRecords()
 }
 
@@ -27,8 +27,9 @@ final class LandingPresenter: LandingPresenterProtocol {
         self.delegate = delegate
     }
     
-    func hkAuthorization() {
-        manager.authorizeHK()
+    func hkAuthorization() async -> Bool {
+        let isAuthorized = await manager.authorizeHK()
+        return isAuthorized
     }
     
     func fetchRecords() {

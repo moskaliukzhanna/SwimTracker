@@ -90,9 +90,14 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
             }
         }
         .onAppear {
-            stopWatchManager.start()
-            presenter.authorizeHealthKit()
+            Task {
+                let isAuthorized = await presenter.authorizeHealthKit()
+                if isAuthorized {
+                    stopWatchManager.start()
+                }
+            }
         }
+        
         .onDisappear {
             presenter.stopWorkout(date: Date())
             stopWatchManager.stop()

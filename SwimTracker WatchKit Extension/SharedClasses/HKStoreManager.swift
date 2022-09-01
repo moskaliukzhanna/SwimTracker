@@ -9,20 +9,22 @@ import Foundation
 import HealthKit
 
 protocol HKStoreProtocol {
-    func authorizeHealthKit()
+    func authorizeHealthKit() async -> Bool
     func fetchDistanceSwiming()
+    var isAccessPermotted: Bool { get }
 }
 
 final class HKStoreManager: HKStoreProtocol {
     // make sure there is only one instance of hkHealtStore
     private let hkHealthStore: HKHealthStore
-//    private var session: HKWorkoutSession?
+    //    private var session: HKWorkoutSession?
+    var isAccessPermotted: Bool = false
     
     init(healthStore: HKHealthStore) {
         self.hkHealthStore = healthStore
     }
     
-    func authorizeHealthKit() {
+    func authorizeHealthKit() async -> Bool {
         print("2")
         print("Health data available \(HKHealthStore.isHealthDataAvailable() )")
         
@@ -39,16 +41,20 @@ final class HKStoreManager: HKStoreProtocol {
                 
             ])
             
-            self.hkHealthStore.requestAuthorization(toShare: typesToWrite,
-                                                    read: typesToRead) { [weak self] sucess, error in
-                guard let self = self else { return }
+            do {
+                try await self.hkHealthStore.requestAuthorization(toShare: typesToWrite,
+                                                                  read: typesToRead)
                 let sharingStatusForCalories = self.hkHealthStore.authorizationStatus(for: HKObjectType.quantityType(forIdentifier: .activeEnergyBurned)!)
-                if sucess && sharingStatusForCalories == .sharingAuthorized {
+                if sharingStatusForCalories == .sharingAuthorized {
                     self.fetchAppleWorkoutSummaries()
                     self.fetchDistanceSwiming()
                 }
+                return true
+            } catch {
+                return false
             }
         }
+        return false
     }
     
     // fetch workout summaries from healthkit

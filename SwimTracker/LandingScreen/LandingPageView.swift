@@ -41,8 +41,12 @@ struct LandingPageView: View {
         .navigationBarTitleDisplayMode(.inline)
         
         .onAppear {
-            presenter.hkAuthorization()
-            presenter.fetchRecords()
+            Task {
+                let isAuthorized = await presenter.hkAuthorization()
+                if isAuthorized {
+                    presenter.fetchRecords()
+                }
+            }
         }
         
     }
