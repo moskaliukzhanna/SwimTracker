@@ -23,7 +23,7 @@ struct StartView: View {
                 .accessibilityIdentifier("swim_button")
             }
             .background(
-                NavigationLink(destination: WorkoutView<StopWatchManager>(), isActive: $isLinkActive) {
+                NavigationLink(destination: ActivityView<StopWatchManager>(), isActive: $isLinkActive) {
                     EmptyView()
                 }
                     .hidden()

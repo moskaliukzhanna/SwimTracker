@@ -1,22 +1,23 @@
 //
-//  WorkoutView.swift
+//  ActivityView.swift
 //  SwimTracker WatchKit Extension
 //
-//  Created by Zhanna Moskaliuk on 10.08.2022.
+//  Created by Zhanna Moskaliuk on 31.08.2022.
 //
 
+import Foundation
 import SwiftUI
 
-struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
-    var presenter: WorkoutPresenterProtocol?
+struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
+    var presenter: ActivityPresenterProtocol
     @ObservedObject var stopWatchManager: Manager
     @Environment(\.dismiss) var dismiss
     @State private var isWorkoutView = true
     
     init() {
         stopWatchManager = StopWatchManager() as! Manager
-        let manager = WorkoutManager()
-        presenter = WorkoutPresenter(manager: manager)
+        let manager = ActivityModel()
+        presenter = ActivityPresenter(manager: manager)
     }
     
     var body: some View {
@@ -76,7 +77,7 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
                     }
                     HStack {
                         if stopWatchManager.state == .paused {
-                            Button(action: {stopWatchManager.resume() }) {
+                            Button(action: { stopWatchManager.resume() }) {
                                 
                                 Image("swimming")
                                     .resizable()
@@ -90,10 +91,10 @@ struct WorkoutView<Manager>: View where Manager: StopWatchManagerProtocol {
         }
         .onAppear {
             stopWatchManager.start()
-            presenter?.authorizeHealthKit()
+            presenter.authorizeHealthKit()
         }
         .onDisappear {
-            presenter?.stopWorkout(date: Date())
+            presenter.stopWorkout(date: Date())
             stopWatchManager.stop()
         }
     }

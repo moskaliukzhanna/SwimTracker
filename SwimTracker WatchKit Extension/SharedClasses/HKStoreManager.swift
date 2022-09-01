@@ -15,7 +15,12 @@ protocol HKStoreProtocol {
 
 final class HKStoreManager: HKStoreProtocol {
     // make sure there is only one instance of hkHealtStore
-    private let hkHealthStore = HKHealthStore()
+    private let hkHealthStore: HKHealthStore
+//    private var session: HKWorkoutSession?
+    
+    init(healthStore: HKHealthStore) {
+        self.hkHealthStore = healthStore
+    }
     
     func authorizeHealthKit() {
         print("2")
@@ -99,6 +104,16 @@ final class HKStoreManager: HKStoreProtocol {
         }
         
         self.hkHealthStore.execute(query)
+    }
+    
+    func startWorkoutSession() {
+        let configuration = HKWorkoutConfiguration()
+        configuration.activityType = .swimming
+        configuration.swimmingLocationType = .pool
+        do {
+        } catch {
+            
+        }
     }
 }
 

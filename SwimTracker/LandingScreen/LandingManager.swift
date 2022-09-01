@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import HealthKit
 
 enum FetchResult: String, Error {
     case noRecordsYet
@@ -24,7 +25,12 @@ protocol LandingManagerProtocol {
 }
 
 final class LandingManager: LandingManagerProtocol {
-    private let workoutManager = HKStoreManager()
+    private let hkStore = HKHealthStore()
+    private let workoutManager: HKStoreManager
+    
+    init() {
+        self.workoutManager = HKStoreManager(healthStore: hkStore)
+    }
     
     func authorizeHK() {
         workoutManager.authorizeHealthKit()
