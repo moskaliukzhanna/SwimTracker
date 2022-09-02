@@ -23,70 +23,13 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
     var body: some View {
         NavigationView {
             VStack {
-                VStack {
-                    Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
-                    if isWorkoutView {
-                        PulseRingView(foregroundColors: [.blue.opacity(0.8), .blue.opacity(0.5)],
-                                      seconds: stopWatchManager.secondsElapsed)
-                        .frame(width: 80, height: 80)
-                    } else {
-                        ActivityRingView(ringWidth: 10,
-                                         percent: 5,
-                                         backgroundColor: .purple.opacity(0.1),
-                                         foregroundColors: [.purple, .pink])
-                        .frame(width: 80, height: 80)
-                        .previewLayout(.sizeThatFits)
+                topView
+                    .onTapGesture {
+                        isWorkoutView.toggle()
                     }
-                    Spacer()
-                }
-                
-                .onTapGesture {
-                    isWorkoutView.toggle()
-                }
-                
-                VStack {
-                    HStack {
-                        switch stopWatchManager.state {
-                        case .runnning:
-                            Button(action: {
-                                stopWatchManager.pause()
-                                
-                            }) {
-                                Image("pause")
-                                    .resizable()
-                                    .frame(width: 20, height: 20, alignment: .center)
-                            }
-                        case .paused:
-                            Button(action: {
-                                endWorkSession()
-                                
-                            }) {
-                                Image("finish")
-                                    .resizable()
-                                    .frame(width: 20, height: 20, alignment: .center)
-                            }
-                            Spacer().frame(width: 20, height: 20)
-                            Button(action: { endWorkSession() }) {
-                                Image("close")
-                                    .resizable()
-                                    .frame(width: 20, height: 20, alignment: .center)
-                            }
-                        default:
-                            EmptyView()
-                        }
-                    }
-                    HStack {
-                        if stopWatchManager.state == .paused {
-                            Button(action: { stopWatchManager.resume() }) {
-                                
-                                Image("swimming")
-                                    .resizable()
-                                    .frame(width: 25, height: 25, alignment: .center)
-                            }
-                        }
-                    }
-                }
-                .frame(width: 120, height: 30)
+                Spacer()
+                bottomView
+                    .frame(width: 120, height: 30)
             }
         }
         .onAppear {
@@ -94,6 +37,7 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
                 let isAuthorized = await presenter.authorizeHealthKit()
                 if isAuthorized {
                     stopWatchManager.start()
+                    presenter.startWorkout()
                 }
             }
         }
@@ -103,6 +47,70 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
             stopWatchManager.stop()
         }
     }
+    
+    private var topView: some View {
+        VStack {
+            Text(String(format: "%.1f", stopWatchManager.secondsElapsed))
+            if isWorkoutView {
+                PulseRingView(foregroundColors: [.blue.opacity(0.8), .blue.opacity(0.5)],
+                              seconds: stopWatchManager.secondsElapsed)
+                .frame(width: 80, height: 80)
+            } else {
+                ActivityRingView(ringWidth: 10,
+                                 percent: 5,
+                                 backgroundColor: .purple.opacity(0.1),
+                                 foregroundColors: [.purple, .pink])
+                .frame(width: 80, height: 80)
+                .previewLayout(.sizeThatFits)
+            }
+        }
+    }
+    
+    private var bottomView: some View {
+        VStack {
+            HStack {
+                switch stopWatchManager.state {
+                case .runnning:
+                    Button(action: {
+                        stopWatchManager.pause()
+                        
+                    }) {
+                        Image("pause")
+                            .resizable()
+                            .frame(width: 20, height: 20, alignment: .center)
+                    }
+                case .paused:
+                    Button(action: {
+                        endWorkSession()
+                        
+                    }) {
+                        Image("finish")
+                            .resizable()
+                            .frame(width: 20, height: 20, alignment: .center)
+                    }
+                    Spacer().frame(width: 20, height: 20)
+                    Button(action: { endWorkSession() }) {
+                        Image("close")
+                            .resizable()
+                            .frame(width: 20, height: 20, alignment: .center)
+                    }
+                default:
+                    EmptyView()
+                }
+            }
+            HStack {
+                if stopWatchManager.state == .paused {
+                    Button(action: { stopWatchManager.resume() }) {
+                        
+                        Image("swimming")
+                            .resizable()
+                            .frame(width: 25, height: 25, alignment: .center)
+                    }
+                }
+            }
+        }
+    }
+    
     
     private func endWorkSession() {
         stopWatchManager.stop()

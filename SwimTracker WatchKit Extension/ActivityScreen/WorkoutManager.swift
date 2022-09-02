@@ -14,7 +14,7 @@ protocol WorkoutManagerProtocol {
     func stopWorkoutSession()
     func pauseWorkoutSession()
     func resumeWorkoutSession()
-    func workoutSessionStatus() -> HKWorkoutSessionState
+    func workoutSessionState() -> HKWorkoutSessionState
 }
 
 final class WorkoutManager: WorkoutManagerProtocol {
@@ -32,7 +32,7 @@ final class WorkoutManager: WorkoutManagerProtocol {
         return isAuthorized
     }
     
-    func workoutSessionStatus() -> HKWorkoutSessionState {
+    func workoutSessionState() -> HKWorkoutSessionState {
         guard let session = session else {
             return .notStarted
         }
@@ -40,6 +40,7 @@ final class WorkoutManager: WorkoutManagerProtocol {
     }
     
     func startWorkoutSession() {
+        createWorkoutSession()
         guard let session = session else {
             return
         }
@@ -65,5 +66,18 @@ final class WorkoutManager: WorkoutManagerProtocol {
             return
         }
         session.resume()
+    }
+    
+    private func createWorkoutSession() {
+        let configuration = HKWorkoutConfiguration()
+        configuration.activityType = .swimming
+        configuration.lapLength = HKQuantity(unit: .meter(), doubleValue: 50)
+        configuration.swimmingLocationType = .pool
+        do {
+            session = try HKWorkoutSession(healthStore: hkStore, configuration: configuration)
+            builder = session?.associatedWorkoutBuilder()
+        } catch {
+            print("Error - \(error)")
+        }
     }
 }

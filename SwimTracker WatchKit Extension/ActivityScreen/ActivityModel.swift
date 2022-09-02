@@ -14,7 +14,7 @@ protocol ActivityModelProtocol {
     func stopWorkoutSession()
     func pauseWorkoutSession()
     func resumeWorkoutSession()
-    func workoutSessionStatus() -> HKWorkoutSessionState
+    func workoutSessionState() -> HKWorkoutSessionState
 }
 
 final class ActivityModel: ActivityModelProtocol {
@@ -29,8 +29,8 @@ final class ActivityModel: ActivityModelProtocol {
         return isAuthorized
     }
     
-    func workoutSessionStatus() -> HKWorkoutSessionState {
-       return manager.workoutSessionStatus()
+    func workoutSessionState() -> HKWorkoutSessionState {
+       return manager.workoutSessionState()
     }
     
     func startWorkoutSession() {

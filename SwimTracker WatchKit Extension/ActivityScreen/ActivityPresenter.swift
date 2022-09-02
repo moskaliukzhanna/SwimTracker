@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import HealthKit
 
 protocol ActivityPresenterProtocol {
+    var workoutSessionState: HKWorkoutSessionState { get }
     func authorizeHealthKit() async -> Bool
     func startWorkout()
     func stopWorkout(date: Date)
@@ -22,26 +24,29 @@ final class ActivityPresenter: ActivityPresenterProtocol {
         self.manager = manager
     }
     
+    var workoutSessionState: HKWorkoutSessionState {
+        return manager.workoutSessionState()
+    }
+    
     func authorizeHealthKit() async -> Bool {
-        print("0")
         let isAuthorized = await manager.authorizeHealthKit()
         return isAuthorized
     }
     
     func startWorkout() {
-        //        manager.startWorkoutSession()
+        manager.startWorkoutSession()
     }
     
     func stopWorkout(date: Date) {
-        //        manager.stopWorkoutSession(date: date)
+        manager.stopWorkoutSession()
     }
     
     func pauseWorkout() {
-        //        manager.pauseWorkoutSession()
+        manager.pauseWorkoutSession()
     }
     
     func resumeWorkout() {
-        //        manager.resumeWorkoutSession()
+        manager.resumeWorkoutSession()
     }
     
 }

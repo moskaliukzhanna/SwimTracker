@@ -127,16 +127,6 @@ final class HKStoreManager: HKStoreProtocol {
         
         self.hkHealthStore.execute(query)
     }
-    
-    func startWorkoutSession() {
-        let configuration = HKWorkoutConfiguration()
-        configuration.activityType = .swimming
-        configuration.swimmingLocationType = .pool
-        do {
-        } catch {
-            
-        }
-    }
 }
 
 
