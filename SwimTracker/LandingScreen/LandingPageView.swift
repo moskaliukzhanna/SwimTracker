@@ -50,10 +50,6 @@ struct LandingPageView: View {
         }
         
     }
-    
-//    private func createEmptyRecordsView() -> AnyView {
-//        let image = Image("swimming")
-//    }
 }
 
 
