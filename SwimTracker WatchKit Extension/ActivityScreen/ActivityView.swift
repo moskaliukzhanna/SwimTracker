@@ -28,6 +28,7 @@ struct ActivityView<Presenter>: View where Presenter: ActivityPresenterProtocol 
                         isWorkoutView.toggle()
                     }
                 Spacer()
+                    .frame(width: 120, height: 20, alignment: .center)
                 bottomView
                     .frame(width: 120, height: 30)
             }
@@ -55,14 +56,11 @@ struct ActivityView<Presenter>: View where Presenter: ActivityPresenterProtocol 
             if isWorkoutView {
                 PulseRingView(foregroundColors: [.blue.opacity(0.8), .blue.opacity(0.5)],
                               seconds: stopWatchManager.secondsElapsed)
-                .frame(width: 80, height: 80)
             } else {
                 ActivityRingView(ringWidth: 10,
                                  percent: 5,
                                  backgroundColor: .purple.opacity(0.1),
                                  foregroundColors: [.purple, .pink])
-                .frame(width: 80, height: 80)
-                .previewLayout(.sizeThatFits)
             }
         }
     }
@@ -78,40 +76,28 @@ struct ActivityView<Presenter>: View where Presenter: ActivityPresenterProtocol 
                     }) {
                         Image("pause")
                             .resizable()
-                            .frame(width: 20, height: 20, alignment: .center)
+                            .scaledToFit()
                     }
+                    
                 case .paused:
-                    Button(action: {
-                        dismiss()
-                        
-                    }) {
-                        Image("finish")
-                            .resizable()
-                            .frame(width: 20, height: 20, alignment: .center)
-                    }
-                    Spacer().frame(width: 20, height: 20)
-                    Button(action: {
-                        dismiss()
-                        
-                    }) {
-                        Image("close")
-                            .resizable()
-                            .frame(width: 20, height: 20, alignment: .center)
-                    }
-                default:
-                    EmptyView()
-                }
-            }
-            HStack {
-                if stopWatchManager.state == .paused {
                     Button(action: {
                         resumeWorkout()
                     }) {
                         
                         Image("swimming")
                             .resizable()
-                            .frame(width: 25, height: 25, alignment: .center)
+                            .scaledToFit()
                     }
+                    Button(action: {
+                        dismiss()
+                        
+                    }) {
+                        Image("finish")
+                            .resizable()
+                            .scaledToFit()
+                    }
+                default:
+                    EmptyView()
                 }
             }
         }

@@ -13,15 +13,6 @@ enum StopWatchState {
     case paused
 }
 
-//protocol StopWatchManagerProtocol: ObservableObject {
-//    var secondsElapsed: Double { get set }
-//    var state: StopWatchState { get set }
-//    func start()
-//    func stop()
-//    func pause()
-//    func resume()
-//}
-
 final class StopWatchManager: ObservableObject {
     
     @Published var state: StopWatchState = .stopped

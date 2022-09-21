@@ -32,7 +32,6 @@ struct PulseRingView: View {
             .stroke(style: StrokeStyle(lineWidth: self.ringWidth, lineCap: .round))
             .scale(self.isOpen ? 0.5 : 1.0)
             .fill(ringGradient)
-            .frame(width: 80, height: 80, alignment: .center)
             .animation(.linear, value: self.isOpen)
             .onChange(of: seconds) { newValue in
                 isOpen.toggle()
