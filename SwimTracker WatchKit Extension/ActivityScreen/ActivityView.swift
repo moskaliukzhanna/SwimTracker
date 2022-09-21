@@ -7,17 +7,17 @@
 
 import Foundation
 import SwiftUI
+import HealthKit
 
-struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
-    var presenter: ActivityPresenterProtocol
-    @ObservedObject var stopWatchManager: Manager
+struct ActivityView<Presenter>: View where Presenter: ActivityPresenterProtocol {
+    let presenter: Presenter
+    @ObservedObject var stopWatchManager: StopWatchManager
     @Environment(\.dismiss) var dismiss
     @State private var isWorkoutView = true
     
-    init() {
-        stopWatchManager = StopWatchManager() as! Manager
-        let manager = ActivityModel()
-        presenter = ActivityPresenter(manager: manager)
+    init(presenter: ActivityPresenterProtocol) {
+        self.stopWatchManager = StopWatchManager()
+        self.presenter = presenter as! Presenter
     }
     
     var body: some View {
@@ -36,15 +36,16 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
             Task {
                 let isAuthorized = await presenter.authorizeHealthKit()
                 if isAuthorized {
-                    stopWatchManager.start()
-                    presenter.startWorkout()
+                    startWorkout()
                 }
             }
         }
+        .onChange(of: presenter.sessionInProgress, perform: { change in
+            print("Change")
+        })
         
         .onDisappear {
-            presenter.stopWorkout(date: Date())
-            stopWatchManager.stop()
+            endWorkout()
         }
     }
     
@@ -72,7 +73,7 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
                 switch stopWatchManager.state {
                 case .runnning:
                     Button(action: {
-                        stopWatchManager.pause()
+                        pauseWorkout()
                         
                     }) {
                         Image("pause")
@@ -81,7 +82,7 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
                     }
                 case .paused:
                     Button(action: {
-                        endWorkSession()
+                        dismiss()
                         
                     }) {
                         Image("finish")
@@ -89,7 +90,10 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
                             .frame(width: 20, height: 20, alignment: .center)
                     }
                     Spacer().frame(width: 20, height: 20)
-                    Button(action: { endWorkSession() }) {
+                    Button(action: {
+                        dismiss()
+                        
+                    }) {
                         Image("close")
                             .resizable()
                             .frame(width: 20, height: 20, alignment: .center)
@@ -100,7 +104,9 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
             }
             HStack {
                 if stopWatchManager.state == .paused {
-                    Button(action: { stopWatchManager.resume() }) {
+                    Button(action: {
+                        resumeWorkout()
+                    }) {
                         
                         Image("swimming")
                             .resizable()
@@ -111,10 +117,25 @@ struct ActivityView<Manager>: View where Manager: StopWatchManagerProtocol {
         }
     }
     
+    private func startWorkout() {
+        presenter.startWorkout()
+        stopWatchManager.start()
+    }
     
-    private func endWorkSession() {
+    private func endWorkout() {
+        print("end workout")
+        presenter.endWorkout()
         stopWatchManager.stop()
-        dismiss()
+    }
+    
+    private func pauseWorkout() {
+        presenter.pauseWorkout()
+        stopWatchManager.pause()
+    }
+    
+    private func resumeWorkout() {
+        presenter.resumeWorkout()
+        stopWatchManager.resume()
     }
 }
 

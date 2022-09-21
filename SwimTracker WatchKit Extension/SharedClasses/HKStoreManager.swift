@@ -11,14 +11,14 @@ import HealthKit
 protocol HKStoreProtocol {
     func authorizeHealthKit() async -> Bool
     func fetchDistanceSwiming()
-    var isAccessPermotted: Bool { get }
+    var isAccessPermitted: Bool { get }
 }
 
 final class HKStoreManager: HKStoreProtocol {
     // make sure there is only one instance of hkHealtStore
-    private let hkHealthStore: HKHealthStore
+    let hkHealthStore: HKHealthStore
     //    private var session: HKWorkoutSession?
-    var isAccessPermotted: Bool = false
+    var isAccessPermitted: Bool = false
     
     init(healthStore: HKHealthStore) {
         self.hkHealthStore = healthStore

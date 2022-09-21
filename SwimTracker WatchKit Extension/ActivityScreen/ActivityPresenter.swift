@@ -7,25 +7,29 @@
 
 import Foundation
 import HealthKit
+import SwiftUI
 
 protocol ActivityPresenterProtocol {
-    var workoutSessionState: HKWorkoutSessionState { get }
+    var sessionInProgress: Bool { get }
     func authorizeHealthKit() async -> Bool
     func startWorkout()
+    func endWorkout()
     func stopWorkout(date: Date)
     func pauseWorkout()
     func resumeWorkout()
 }
 
 final class ActivityPresenter: ActivityPresenterProtocol {
-    private var manager: ActivityModelProtocol
+    @ObservedObject var manager: WorkoutManager
+    @State var isWorkingout = false
     
-    init(manager: ActivityModelProtocol) {
+    init(manager: WorkoutManager) {
         self.manager = manager
+        self.isWorkingout = manager.sessionState == .running
     }
     
-    var workoutSessionState: HKWorkoutSessionState {
-        return manager.workoutSessionState()
+    var sessionInProgress: Bool {
+        return manager.sessionState == .running
     }
     
     func authorizeHealthKit() async -> Bool {
@@ -35,6 +39,10 @@ final class ActivityPresenter: ActivityPresenterProtocol {
     
     func startWorkout() {
         manager.startWorkoutSession()
+    }
+    
+    func endWorkout() {
+        manager.endWorkout()
     }
     
     func stopWorkout(date: Date) {

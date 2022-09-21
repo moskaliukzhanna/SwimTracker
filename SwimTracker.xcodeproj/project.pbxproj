@@ -19,7 +19,6 @@
 		20BFF28328BF67F9007CE8F1 /* HKStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20157C6F28B773BE0006CD46 /* HKStoreManager.swift */; };
 		20BFF28628BF8E5F007CE8F1 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BFF28528BF8E5F007CE8F1 /* ActivityView.swift */; };
 		20BFF28828BF8E6F007CE8F1 /* ActivityPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BFF28728BF8E6F007CE8F1 /* ActivityPresenter.swift */; };
-		20BFF28A28BF8E79007CE8F1 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BFF28928BF8E79007CE8F1 /* ActivityModel.swift */; };
 		20BFF28D28BF8FA4007CE8F1 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BFF28C28BF8FA4007CE8F1 /* WorkoutManager.swift */; };
 		20D15EB328A65E4500EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB228A65E4500EE8B15 /* HealthKit.framework */; };
 		20D15EB628A6643200EE8B15 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D15EB528A6643200EE8B15 /* HealthKit.framework */; };
@@ -105,7 +104,6 @@
 		20B7F56F28B4F36900226BD8 /* SwimTracker-WatchKit-AppUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwimTracker-WatchKit-AppUITests-Info.plist"; sourceTree = SOURCE_ROOT; };
 		20BFF28528BF8E5F007CE8F1 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		20BFF28728BF8E6F007CE8F1 /* ActivityPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityPresenter.swift; sourceTree = "<group>"; };
-		20BFF28928BF8E79007CE8F1 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		20BFF28C28BF8FA4007CE8F1 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		20D15EB028A65E4500EE8B15 /* SwimTracker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SwimTracker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		20D15EB228A65E4500EE8B15 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.5.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -220,7 +218,6 @@
 			children = (
 				20BFF28528BF8E5F007CE8F1 /* ActivityView.swift */,
 				20BFF28728BF8E6F007CE8F1 /* ActivityPresenter.swift */,
-				20BFF28928BF8E79007CE8F1 /* ActivityModel.swift */,
 				20EF794128AA3E2000D53803 /* StopWatchManager.swift */,
 				20BFF28C28BF8FA4007CE8F1 /* WorkoutManager.swift */,
 			);
@@ -510,7 +507,6 @@
 				20157C7128B773BE0006CD46 /* HKStoreManager.swift in Sources */,
 				20FE3E9328A3D1020032A25D /* StartView.swift in Sources */,
 				20BFF28628BF8E5F007CE8F1 /* ActivityView.swift in Sources */,
-				20BFF28A28BF8E79007CE8F1 /* ActivityModel.swift in Sources */,
 				2042AB4928BCC41B000EC5BE /* View+Additions.swift in Sources */,
 				20FE3E9928A3F5DE0032A25D /* ActivityRingView.swift in Sources */,
 				20BFF28828BF8E6F007CE8F1 /* ActivityPresenter.swift in Sources */,
